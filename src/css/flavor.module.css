@@ -1,0 +1,7 @@
+.flavor-card {
+  width: 50%;
+}
+
+.flavor-card h3 {
+  color: var(--primaryColor);
+}

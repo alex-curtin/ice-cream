@@ -1,0 +1,13 @@
+header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primaryColor);
+  color: var(--offWhite);
+}
+
+header a {
+  margin: 0 10px;
+  color: var(--offWhite);
+}
