@@ -1,4 +1,4 @@
-header {
+.header {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@ header {
   color: var(--offWhite);
 }
 
-header a {
+.header a {
   margin: 0 10px;
   color: var(--offWhite);
 }
