@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import styles from "../css/navbar.module.css"
 import navLinks from "../constants/nav-links"
 
 const Navbar = ({ siteTitle }) => (

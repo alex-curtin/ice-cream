@@ -1,12 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Flavor from "../components/Flavor"
 import flavorList from "../constants/flavors"
 
 const flavors = ({ data }) => {
   const { nodes } = data.allImageSharp
-  console.log(nodes)
+
   return (
     <Layout>
       {flavorList.map(flavor => (
