@@ -1,7 +1,88 @@
-.flavor-card {
-  width: 50%;
+.flavors {
+  display: grid;
+  padding: 0 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 5rem;
+  grid-row-gap: 3rem;
+  width: 90vw;
+  margin: 0 auto;
 }
 
-.flavor-card h3 {
+.flavor-card {
+  position: relative;
+  box-shadow: 4px 6px 13px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--mainWhite);
+}
+
+.img-container::before {
+  content: "";
+  background-image: url("../images/waves.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 0;
+}
+
+.flavor-card:nth-child(2n) .img-container::before {
+  transform: scaleX(-1);
+}
+
+.flavor-card:nth-child(3n) .img-container::before {
+  height: 60%;
+}
+
+.flavor-card:nth-child(4n) .img-container::before {
+  height: 40%;
+}
+
+.flavor-card-info {
+  padding: 0 20px;
+  position: absolute;
+  height: 0px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainWhite);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  letter-spacing: 1px;
+  color: transparent;
+}
+
+.img-container:hover > .flavor-card-info {
+  opacity: 1;
+  height: 100%;
+  color: var(--mainBlack);
+}
+
+.flavor-card h2 {
+  text-align: center;
   color: var(--primaryColor);
+  background-color: var(--mainGrey);
+  /* margin-bottom: 0.5rem; */
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
 }

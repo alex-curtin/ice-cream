@@ -2,31 +2,35 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Flavor from "../components/Flavor"
-import flavorList from "../constants/flavors"
+import styles from "../css/flavor.module.css"
 
 const flavors = ({ data }) => {
-  const { nodes } = data.allImageSharp
+  const { flavorsList } = data.iceCream
 
   return (
     <Layout>
-      {flavorList.map(flavor => (
-        <Flavor
-          key={flavor.id}
-          flavor={flavor}
-          img={nodes.find(node => node.fixed.originalName === flavor.imgPath)}
-        />
-      ))}
+      <div className={styles.flavors}>
+        {flavorsList.map(flavor => (
+          <Flavor key={flavor.id} flavor={flavor} />
+        ))}
+      </div>
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allImageSharp {
-      nodes {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-          originalName
+    iceCream: allContentfulIceCreamProduct {
+      flavorsList: nodes {
+        id
+        name
+        description {
+          description
+        }
+        image {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
         }
       }
     }

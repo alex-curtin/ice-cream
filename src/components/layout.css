@@ -2,11 +2,15 @@
 
 :root {
   --primaryColor: #3cb878;
+  --primaryTrans: #3cb878bb;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
+  --small: 768px;
+  --medium: 992px;
+  --large: 1200px;
 }
 
 * {
@@ -29,12 +33,22 @@ h6 {
   font-family: "Lobster", sans-serif;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 a {
   text-decoration: none;
+  color: var(--primaryColor);
 }
 
 main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--primaryColor);
+}
+
+.container {
+  padding: 10%;
 }

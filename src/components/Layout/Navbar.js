@@ -11,7 +11,7 @@ const Navbar = ({ siteTitle }) => {
       </h1>
       <nav>
         {navLinks.map(link => (
-          <Link key={link.id} to={link.path}>
+          <Link key={link.id} to={link.path} className={styles.link}>
             {link.text}
           </Link>
         ))}
