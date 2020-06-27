@@ -8,6 +8,7 @@
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
+  --pink: #f4246c;
   --small: 768px;
   --medium: 992px;
   --large: 1200px;
@@ -34,7 +35,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 a {

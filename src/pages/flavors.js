@@ -29,7 +29,7 @@ export const query = graphql`
         }
         image {
           fluid {
-            ...GatsbyContentfulFluid_withWebp
+            ...GatsbyContentfulFluid
           }
         }
       }

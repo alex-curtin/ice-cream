@@ -1,19 +1,26 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import navLinks from "../../constants/nav-links"
 import styles from "../../css/navbar.module.css"
 
-const Navbar = ({ siteTitle }) => {
+const Navbar = ({ siteTitle, isHome }) => {
+  console.log(isHome)
   return (
-    <header className={styles.header}>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
+    <header className={`${styles.header} ${isHome ? styles.animate : ""}`}>
+      <h1 className={isHome ? styles.animate : ""}>
+        <AniLink to="/">{siteTitle}</AniLink>
       </h1>
       <nav>
         {navLinks.map(link => (
-          <Link key={link.id} to={link.path} className={styles.link}>
+          <AniLink
+            fade
+            key={link.id}
+            to={link.path}
+            className={`${styles.link} ${isHome ? styles.animate : ""}`}
+          >
             {link.text}
-          </Link>
+          </AniLink>
         ))}
       </nav>
     </header>

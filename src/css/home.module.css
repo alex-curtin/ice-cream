@@ -7,19 +7,15 @@
 }
 
 .hero {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  color: var(--mainWhite);
+}
+.hero p {
+  font-size: 4rem;
+  font-weight: bold;
 }
 
-.scoop {
-  width: 100%;
-}
-
-.cone {
-  width: 80%;
-}
-
-.hero:hover > .scoop {
-  margin-bottom: 10px;
+.hero span {
+  font-family: "Lobster", sans-serif;
+  font-size: 10rem;
 }
