@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lato:wght@400;700;900&display=swap");
 
 :root {
   --primaryColor: #3cb878;
@@ -7,7 +7,13 @@
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --darkGrey: #999;
+  --gradient: linear-gradient(
+    180deg,
+    rgba(60, 184, 120, 0.4) 0%,
+    rgba(60, 184, 120, 0.4) 95%,
+    rgba(60, 184, 120, 1) 96%
+  );
   --pink: #f4246c;
   --small: 768px;
   --medium: 992px;
@@ -22,7 +28,7 @@
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Lato, sans-serif;
 }
 
 h1,
@@ -35,7 +41,8 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--mainWhite);
 }
 
 a {

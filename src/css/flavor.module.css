@@ -1,11 +1,43 @@
+.flavors-page {
+  padding: 0 5rem;
+  width: 90vw;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.flavors-page h1 {
+  margin-bottom: 1rem;
+}
+
+.flavors-page .top {
+  margin: 0 auto 2rem;
+  width: 70%;
+  position: relative;
+  padding: 4rem;
+}
+
+.flavors-page .top p {
+  z-index: 1;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.flavors-page .top img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
 .flavors {
   display: grid;
-  padding: 0 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
-  width: 90vw;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .flavor-card {
@@ -86,4 +118,25 @@
 }
 
 @media (max-width: 768px) {
+  .flavor {
+    width: 100vw;
+  }
+
+  .flavors-page .top {
+    margin: 0 auto 3rem;
+    width: 100%;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flavors-page {
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .flavors-page .top {
+    margin: 0 auto 3rem;
+    width: 100%;
+  }
 }

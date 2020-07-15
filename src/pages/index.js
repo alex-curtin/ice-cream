@@ -1,18 +1,27 @@
 import React from "react"
 import Layout from "../components/Layout"
-import styles from "../css/home.module.css"
+import Hero from "../components/Hero"
+import HomeLinks from "../components/HomeLinks"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <section className={styles.home}>
-        <div className={styles.hero}>
-          <span>Melty's</span>
-          <p>Premium Ice Cream</p>
-        </div>
-      </section>
+    <Layout isHome>
+      <Hero />
+      <HomeLinks />
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    iceCream: contentfulIceCreamProduct(featured: { eq: true }) {
+      image {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
