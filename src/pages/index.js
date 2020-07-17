@@ -1,9 +1,10 @@
 import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import HomeLinks from "../components/HomeLinks"
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <Layout isHome>
       <Hero />
@@ -11,17 +12,5 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    iceCream: contentfulIceCreamProduct(featured: { eq: true }) {
-      image {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

@@ -19,7 +19,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.2,
+      },
+    },
     `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -33,6 +39,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
     {
       resolve: `gatsby-source-contentful`,
       options: {

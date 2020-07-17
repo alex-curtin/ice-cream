@@ -14,9 +14,9 @@ const flavors = ({ data }) => {
         <h1>Our Flavors</h1>
         <div className={styles.top}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-            expedita! Ratione ad quibusdam consectetur doloremque natus vero
-            magni similique quas.
+            We're very proud of our variety of unique and classic flavors. Each
+            recipe is carefully crafted using only the best all natural
+            ingedients to deliver an amazing flavor experience!
           </p>
           <img src={shape} />
         </div>

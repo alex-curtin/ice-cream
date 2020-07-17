@@ -34,14 +34,21 @@
   text-align: left;
 }
 
-.home-info img {
-  width: 200px;
+/* .gatsby-image-wrapper picture img {
+  object-fit: contain;
+  object-position: left;
+} */
+
+.home-info .about-img,
+.home-info .contact-img {
+  min-width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.home-info .about-img {
-  height: 200px;
+.home-info .flavors-img {
+  min-width: 200px;
   object-fit: cover;
-  border-radius: 50%;
 }
 
 .home-info .card-info {

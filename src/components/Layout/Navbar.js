@@ -5,7 +5,6 @@ import navLinks from "../../constants/nav-links"
 import styles from "../../css/navbar.module.css"
 
 const Navbar = ({ siteTitle, isHome }) => {
-  console.log(isHome)
   return (
     <header className={`${styles.header} ${isHome ? styles.home : ""}`}>
       <h1>

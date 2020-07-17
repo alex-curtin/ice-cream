@@ -1,17 +1,26 @@
 .home {
-  background: var(--gradient), url("../images/scoops-bg.png");
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 50;
+  background-size: contain;
+}
+
+.home .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gradient);
 }
 
 .home svg {
   align-self: center;
   margin-top: 3rem;
   color: var(--mainWhite);
+  z-index: 50;
 }
 
 .hero {
@@ -23,6 +32,7 @@
   justify-content: center;
   align-items: flex-end;
   animation: wipe 1s none ease-in-out;
+  z-index: 50;
 }
 
 .hero::after {
@@ -46,6 +56,7 @@
   text-align: center;
   margin-top: 4rem;
   animation: appear 1s none step-end;
+  z-index: 50;
 }
 
 .hero span {
