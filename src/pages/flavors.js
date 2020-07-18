@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Flavor from "../components/Flavor"
 import styles from "../css/flavor.module.css"
-import shape from "../images/shape.svg"
+import shape from "../../static/img/shape.svg"
 
 const flavors = ({ data }) => {
   const { flavorsList } = data.iceCream

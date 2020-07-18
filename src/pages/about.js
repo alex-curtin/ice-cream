@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import styles from "../css/about.module.css"
 // import cone from "../images/cone-2.jpeg"
 // import cow from "../images/cow.jpeg"
-import shape from "../images/shape.svg"
+import shape from "../../static/img/shape.svg"
 
 const about = ({ data }) => {
   const { cowImg, coneImg } = data
