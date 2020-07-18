@@ -16,7 +16,6 @@ const about = ({ data }) => {
         <h1>About Our Ice Cream</h1>
         <article>
           <img src={shape} className={styles.bgImg} />
-          {/* <img src={cone} className={styles.mainImg} /> */}
           <Img fluid={coneImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Dedication to Quality</h2>
@@ -27,9 +26,9 @@ const about = ({ data }) => {
             </p>
           </div>
         </article>
+
         <article>
           <img src={shape} className={styles.bgImg} />
-          {/* <img src={cow} className={styles.mainImg} /> */}
           <Img fluid={cowImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Organic Ingredients</h2>

@@ -24,8 +24,9 @@
 
 .flavors-page .top img {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   position: absolute;
+  object-fit: contain;
   z-index: 0;
   top: 0;
   left: 0;
