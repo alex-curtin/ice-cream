@@ -17,6 +17,10 @@
   padding: 4rem;
   position: relative;
   text-align: right;
+  background: url("../../static/img/shape.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about article:nth-child(2n) {
@@ -52,15 +56,6 @@
   margin: 0 3rem;
   position: relative;
   z-index: 1;
-}
-
-.bgImg {
-  object-fit: fill;
-  position: absolute;
-  height: 100%;
-  max-width: 100%;
-  top: 0;
-  left: 0;
 }
 
 @media (max-width: 768px) {

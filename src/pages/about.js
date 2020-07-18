@@ -3,9 +3,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import styles from "../css/about.module.css"
-// import cone from "../images/cone-2.jpeg"
-// import cow from "../images/cow.jpeg"
-import shape from "../../static/img/shape.svg"
 
 const about = ({ data }) => {
   const { cowImg, coneImg } = data
@@ -15,7 +12,6 @@ const about = ({ data }) => {
       <section className={styles.about}>
         <h1>About Our Ice Cream</h1>
         <article>
-          <img src={shape} className={styles.bgImg} />
           <Img fluid={coneImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Dedication to Quality</h2>
@@ -28,7 +24,6 @@ const about = ({ data }) => {
         </article>
 
         <article>
-          <img src={shape} className={styles.bgImg} />
           <Img fluid={cowImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Organic Ingredients</h2>
