@@ -57,11 +57,13 @@
   margin-top: 4rem;
   animation: appear 1s none step-end;
   z-index: 50;
+  cursor: pointer;
 }
 
 .hero span {
   font-family: "Lobster", sans-serif;
   font-size: 10rem;
+  cursor: pointer;
   animation: appear 1s none ease-in;
 }
 

@@ -11,7 +11,6 @@ const HomeLinks = () => {
     <section className={styles.homeInfo} id="links">
       <h1>Melty's - the best ice cream around</h1>
       <article className={styles.link}>
-        {/* <img src={aboutImg} className={styles.aboutImg} /> */}
         <Img fluid={aboutImg.img.fluid} className={styles.aboutImg} />
         <div className={styles.cardInfo}>
           We take pride in making the highest quality ice cream, using only the
@@ -29,7 +28,6 @@ const HomeLinks = () => {
       </article>
 
       <article className={styles.link}>
-        {/* <img src={flavorsImg} /> */}
         <Img fluid={flavorsImg.img.fluid} className={styles.flavorsImg} />
         <div className={styles.cardInfo}>
           We offer a variety of classic and unique flavors, each one carefully
@@ -47,7 +45,6 @@ const HomeLinks = () => {
       </article>
 
       <article className={styles.link}>
-        {/* <img src={contactImg} className={styles.contactImg} /> */}
         <Img
           fluid={contactImg.img.fluid}
           className={styles.contactImg}

@@ -22,9 +22,9 @@ const Hero = () => {
       }}
     >
       <div className={styles.hero}>
-        <span>Melty's</span>
+        <span onClick={() => scrollTo("#links")}>Melty's</span>
       </div>
-      <p>Premium Ice Cream</p>
+      <p onClick={() => scrollTo("#links")}>Premium Ice Cream</p>
       <IoMdIceCream size="10rem" onClick={() => scrollTo("#links")} />
       <div className={styles.overlay}></div>
     </BackgroundImage>
@@ -36,7 +36,7 @@ const query = graphql`
     backgroundImg: file(relativePath: { eq: "scoops-bg.jpg" }) {
       img: childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

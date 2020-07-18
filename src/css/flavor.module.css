@@ -33,11 +33,10 @@
 
 .flavors {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
   margin: 0 auto;
-  /* overflow: hidden; */
 }
 
 .flavor-card {
@@ -62,7 +61,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 110%;
   height: 60%;
   z-index: 0;
 }
@@ -95,17 +94,15 @@
   transition: height 0.5s ease-in-out, color 0.2s step-end;
   text-align: center;
   letter-spacing: 1px;
-  color: transparent;
+  overflow: hidden;
 }
 
 .img-container:hover > .flavor-card-info {
   height: 100%;
-  color: var(--mainBlack);
 }
 
-.flavor-card-icons {
-  color: inherit;
-  transition: inherit;
+.flavor-card svg {
+  margin-bottom: 1rem;
 }
 
 .flavor-card h2 {
@@ -113,9 +110,6 @@
   color: var(--primaryColor);
   background-color: var(--mainGrey);
   padding: 0.75rem 1rem;
-}
-
-@media (max-width: 992px) {
 }
 
 @media (max-width: 768px) {
@@ -128,16 +122,33 @@
     width: 100%;
     padding: 3rem;
   }
+
+  .flavor-card-info {
+    padding: 0 100px;
+  }
 }
 
 @media (max-width: 576px) {
   .flavors-page {
     width: 100vw;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .flavors-page .top {
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     width: 100%;
+    padding: 2rem;
+  }
+
+  .flavor-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .flavor-card-info {
+    padding: 0 50px;
+  }
+  .flavor-card-info svg {
+    display: none;
   }
 }
