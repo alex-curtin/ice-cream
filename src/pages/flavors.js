@@ -1,24 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import Layout from "../components/Layout"
 import Flavor from "../components/Flavor"
 import styles from "../css/flavor.module.css"
-import shape from "../../static/img/shape.svg"
 
 const flavors = ({ data }) => {
-  const { flavorsList } = data.iceCream
+  const {
+    iceCream: { flavorsList },
+    bgImg,
+  } = data
 
   return (
     <Layout>
       <section className={styles.flavorsPage}>
         <h1>Our Flavors</h1>
-        <div className={styles.top}>
+        <BackgroundImage
+          Tag="div"
+          className={styles.top}
+          fluid={bgImg.img.fluid}
+          style={{ backgroundSize: "100% 100%" }}
+        >
           <p>
             We're very proud of our variety of unique and classic flavors. Each
             recipe is carefully crafted using only the best all natural
             ingedients to deliver an amazing flavor experience!
           </p>
-        </div>
+        </BackgroundImage>
         <div className={styles.flavors}>
           {flavorsList.map(flavor => (
             <Flavor key={flavor.id} flavor={flavor} />
@@ -42,6 +50,13 @@ export const query = graphql`
           fluid {
             ...GatsbyContentfulFluid
           }
+        }
+      }
+    }
+    bgImg: file(relativePath: { eq: "shape.png" }) {
+      img: childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

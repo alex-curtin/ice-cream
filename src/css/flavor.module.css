@@ -14,8 +14,6 @@
   width: 70%;
   position: relative;
   padding: 4rem;
-  background: url("../../static/img/shape.svg");
-  background-size: 100% 100%;
 }
 
 .flavors-page .top p {

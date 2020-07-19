@@ -1,17 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import Layout from "../components/Layout"
 import styles from "../css/about.module.css"
 
 const about = ({ data }) => {
-  const { cowImg, coneImg } = data
+  const { cowImg, coneImg, bgImg } = data
 
   return (
     <Layout>
       <section className={styles.about}>
         <h1>About Our Ice Cream</h1>
-        <article>
+        <BackgroundImage
+          Tag="article"
+          fluid={bgImg.img.fluid}
+          style={{
+            backgroundSize: "100% 100%",
+          }}
+        >
           <Img fluid={coneImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Dedication to Quality</h2>
@@ -21,9 +28,15 @@ const about = ({ data }) => {
               consistency and quality control.
             </p>
           </div>
-        </article>
+        </BackgroundImage>
 
-        <article>
+        <BackgroundImage
+          Tag="article"
+          fluid={bgImg.img.fluid}
+          style={{
+            backgroundSize: "100% 100%",
+          }}
+        >
           <Img fluid={cowImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Organic Ingredients</h2>
@@ -36,7 +49,7 @@ const about = ({ data }) => {
               chocolate.
             </p>
           </div>
-        </article>
+        </BackgroundImage>
       </section>
     </Layout>
   )
@@ -52,6 +65,13 @@ export const query = graphql`
       }
     }
     coneImg: file(relativePath: { eq: "cone-2.jpeg" }) {
+      img: childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bgImg: file(relativePath: { eq: "shape.png" }) {
       img: childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

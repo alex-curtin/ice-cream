@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import scrollTo from "gatsby-plugin-smoothscroll"
-
 import BackgroundImage from "gatsby-background-image"
 import styles from "../css/hero.module.css"
 import { IoMdIceCream } from "react-icons/io"
@@ -12,7 +11,7 @@ const Hero = () => {
 
   return (
     <BackgroundImage
-      tag="section"
+      Tag="section"
       fluid={backgroundImg.img.fluid}
       className={styles.home}
       style={{
