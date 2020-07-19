@@ -12,6 +12,7 @@
   border-radius: 5px;
   overflow: hidden;
   max-width: 800px;
+  height: auto;
   margin: 0 auto 2rem;
   padding: 4rem;
   text-align: right;
