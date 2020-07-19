@@ -12,13 +12,7 @@ const about = ({ data }) => {
     <Layout>
       <section className={styles.about}>
         <h1>About Our Ice Cream</h1>
-        <BackgroundImage
-          Tag="article"
-          fluid={bgImg.img.fluid}
-          style={{
-            backgroundSize: "100% 100%",
-          }}
-        >
+        <article>
           <Img fluid={coneImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Dedication to Quality</h2>
@@ -28,7 +22,7 @@ const about = ({ data }) => {
               consistency and quality control.
             </p>
           </div>
-        </BackgroundImage>
+        </article>
 
         <BackgroundImage
           Tag="article"
@@ -74,7 +68,7 @@ export const query = graphql`
     bgImg: file(relativePath: { eq: "shape.png" }) {
       img: childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

@@ -16,6 +16,8 @@
   margin: 0 auto 2rem;
   padding: 4rem;
   text-align: right;
+  background: url("../images/shape.svg");
+  background-size: 100% 100%;
 }
 
 .about article:nth-child(2n) {

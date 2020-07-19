@@ -56,7 +56,7 @@ export const query = graphql`
     bgImg: file(relativePath: { eq: "shape.png" }) {
       img: childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

@@ -35,7 +35,7 @@ const query = graphql`
     backgroundImg: file(relativePath: { eq: "scoops-bg.jpg" }) {
       img: childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
