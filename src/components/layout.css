@@ -28,7 +28,7 @@
 
 body {
   margin: 0;
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 main {
@@ -58,7 +58,6 @@ a {
 main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: var(--primaryColor);
 }
 
