@@ -18,7 +18,6 @@ const flavors = ({ data }) => {
             recipe is carefully crafted using only the best all natural
             ingedients to deliver an amazing flavor experience!
           </p>
-          <img src={shape} />
         </div>
         <div className={styles.flavors}>
           {flavorsList.map(flavor => (
