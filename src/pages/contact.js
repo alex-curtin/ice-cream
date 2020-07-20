@@ -25,7 +25,7 @@ const contact = () => {
           </div>
           <iframe
             frameborder="0"
-            src={`https://www.google.com/maps/embed/v1/view?zoom=14&center=40.7433,-73.9196&key=${process.env.GOOGLE_MAPS_API_KEY}`}
+            src={`https://www.google.com/maps/embed/v1/view?zoom=14&center=40.7433,-73.9196&key=${process.env.GATSBY_GOOGLE_MAPS_API_KEY}`}
             allowfullscreen
           ></iframe>
         </div>

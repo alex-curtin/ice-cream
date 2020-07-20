@@ -12,7 +12,11 @@ const about = ({ data }) => {
     <Layout>
       <section className={styles.about}>
         <h1>About Our Ice Cream</h1>
-        <article>
+        <article
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <Img fluid={coneImg.img.fluid} className={styles.mainImg} />
           <div>
             <h2>Dedication to Quality</h2>
@@ -24,12 +28,10 @@ const about = ({ data }) => {
           </div>
         </article>
 
-        <BackgroundImage
-          Tag="article"
-          fluid={bgImg.img.fluid}
-          style={{
-            backgroundSize: "100% 100%",
-          }}
+        <article
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
         >
           <Img fluid={cowImg.img.fluid} className={styles.mainImg} />
           <div>
@@ -43,7 +45,7 @@ const about = ({ data }) => {
               chocolate.
             </p>
           </div>
-        </BackgroundImage>
+        </article>
       </section>
     </Layout>
   )
@@ -62,13 +64,6 @@ export const query = graphql`
       img: childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bgImg: file(relativePath: { eq: "shape.png" }) {
-      img: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

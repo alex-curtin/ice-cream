@@ -12,8 +12,11 @@
 .flavors-page .top {
   margin: 0 auto 2rem;
   width: 70%;
+  max-width: 700px;
   position: relative;
   padding: 4rem;
+  background-image: url("../images/shape.svg");
+  background-size: 100% 100%;
 }
 
 .flavors-page .top p {
@@ -38,6 +41,7 @@
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
   margin: 0 auto;
+  /* overflow: hidden; */
 }
 
 .flavor-card {
