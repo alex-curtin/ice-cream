@@ -17,6 +17,7 @@
   padding: 4rem;
   background-image: url("../images/shape.svg");
   background-size: 100% 100%;
+  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.15));
 }
 
 .flavors-page .top p {
@@ -46,7 +47,7 @@
 
 .flavor-card {
   position: relative;
-  box-shadow: 4px 6px 13px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 6px 13px -5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   overflow: hidden;
 }

@@ -89,6 +89,7 @@
     align-self: center;
     margin-bottom: 0.5rem;
   }
+
   .header .link.active {
     border: none;
   }

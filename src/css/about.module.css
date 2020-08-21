@@ -18,6 +18,7 @@
   text-align: right;
   background: url("../images/shape.svg");
   background-size: 100% 100%;
+  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.15));
 }
 
 .about article:nth-child(2n) {
